@@ -1,0 +1,227 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 40 and seed 5986586416616491511 with 1 worker on 12 cores with 3524MB heap and 64MB offheap memory [pid: 17403] (Linux 5.19.0-38-generic amd64, Ubuntu 11.0.18 x86_64, MSBDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /home/lcmj/Desktop/Clases/VF/Aula4/Increment.tla
+Parsing file /tmp/Integers.tla
+Parsing file /tmp/Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Increment
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2023-03-28 23:27:27)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2023-03-28 23:27:27.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2114:1 @!@!@
+Deadlock reached.
+@!@!@ENDMSG 2114 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ x = 0
+/\ y = <<0, 0, 0, 0, 0>>
+/\ pc = <<0, 0, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Increment_y line 16, col 5 to line 20, col 33 of module Increment>
+/\ x = 0
+/\ y = <<0, 0, 0, 0, 0>>
+/\ pc = <<1, 0, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <Increment_x line 23, col 5 to line 26, col 33 of module Increment>
+/\ x = 1
+/\ y = <<0, 0, 0, 0, 0>>
+/\ pc = <<2, 0, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <Increment_y line 16, col 5 to line 20, col 33 of module Increment>
+/\ x = 1
+/\ y = <<0, 1, 0, 0, 0>>
+/\ pc = <<2, 1, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <Increment_x line 23, col 5 to line 26, col 33 of module Increment>
+/\ x = 2
+/\ y = <<0, 1, 0, 0, 0>>
+/\ pc = <<2, 2, 0, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <Increment_y line 16, col 5 to line 20, col 33 of module Increment>
+/\ x = 2
+/\ y = <<0, 1, 2, 0, 0>>
+/\ pc = <<2, 2, 1, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <Increment_x line 23, col 5 to line 26, col 33 of module Increment>
+/\ x = 3
+/\ y = <<0, 1, 2, 0, 0>>
+/\ pc = <<2, 2, 2, 0, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+8: <Increment_y line 16, col 5 to line 20, col 33 of module Increment>
+/\ x = 3
+/\ y = <<0, 1, 2, 3, 0>>
+/\ pc = <<2, 2, 2, 1, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+9: <Increment_x line 23, col 5 to line 26, col 33 of module Increment>
+/\ x = 4
+/\ y = <<0, 1, 2, 3, 0>>
+/\ pc = <<2, 2, 2, 2, 0>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+10: <Increment_y line 16, col 5 to line 20, col 33 of module Increment>
+/\ x = 4
+/\ y = <<0, 1, 2, 3, 4>>
+/\ pc = <<2, 2, 2, 2, 1>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+11: <Increment_x line 23, col 5 to line 26, col 33 of module Increment>
+/\ x = 5
+/\ y = <<0, 1, 2, 3, 4>>
+/\ pc = <<2, 2, 2, 2, 2>>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2023-03-28 23:27:28
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 13, col 1 to line 13, col 4 of module Increment>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 13, col 9 to line 13, col 66 of module Increment: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Increment_y line 15, col 1 to line 15, col 14 of module Increment>: 325:330
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 16, col 8 to line 16, col 16 of module Increment: 3020
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 16, col 8 to line 16, col 12 of module Increment: 2690
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 17, col 24 to line 17, col 32 of module Increment: 4260
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 17, col 24 to line 17, col 28 of module Increment: 2610
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 17, col 17 to line 17, col 20 of module Increment: 650
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 18, col 8 to line 18, col 13 of module Increment: 330
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 19, col 8 to line 19, col 31 of module Increment: 330
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 20, col 8 to line 20, col 33 of module Increment: 330
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Increment_x line 22, col 1 to line 22, col 14 of module Increment>: 325:330
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 23, col 8 to line 23, col 16 of module Increment: 3015
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 23, col 8 to line 23, col 12 of module Increment: 2685
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 24, col 8 to line 24, col 13 of module Increment: 330
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 25, col 8 to line 25, col 20 of module Increment: 330
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 26, col 8 to line 26, col 33 of module Increment: 330
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<Action line 36, col 26 to line 36, col 45 of module Increment>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 36, col 26 to line 36, col 45 of module Increment: 651
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 36, col 26 to line 36, col 31 of module Increment: 651
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 34, col 11 to line 34, col 35 of module Increment: 651
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 34, col 27 to line 34, col 35 of module Increment: 1836
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 34, col 20 to line 34, col 23 of module Increment: 651
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 36, col 36 to line 36, col 45 of module Increment: 120
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<Action line 38, col 23 to line 38, col 71 of module Increment>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 38, col 23 to line 38, col 71 of module Increment: 651
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 38, col 41 to line 38, col 71 of module Increment: 16275
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 38, col 41 to line 38, col 58 of module Increment: 16275
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 38, col 41 to line 38, col 49 of module Increment: 16275
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 38, col 54 to line 38, col 58 of module Increment: 1625
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 38, col 63 to line 38, col 71 of module Increment: 1300
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 38, col 34 to line 38, col 37 of module Increment: 651
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(11) at 2023-03-28 23:27:28: 651 states generated (39 938 s/min), 651 distinct states found (39 938 ds/min), 119 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+651 states generated, 651 distinct states found, 119 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 11.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 5 and the 95th percentile is 2).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 993ms at (2023-03-28 23:27:28)
+@!@!@ENDMSG 2186 @!@!@
