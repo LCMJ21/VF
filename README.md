@@ -1,1 +1,1 @@
-# Repositório com alguns exercícios de Verificação Formal
+# Repositório com exercícios de Verificação Formal
