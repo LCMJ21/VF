@@ -2,7 +2,7 @@
 TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with fp 2 and seed -9187468673920189270 with 1 worker on 12 cores with 3524MB heap and 64MB offheap memory [pid: 17075] (Linux 5.19.0-38-generic amd64, Ubuntu 11.0.18 x86_64, MSBDiskFPSet, DiskStateQueue).
+Running breadth-first search Model-Checking with fp 0 and seed -1501394813167801024 with 1 worker on 12 cores with 3524MB heap and 64MB offheap memory [pid: 35638] (Linux 5.19.0-38-generic amd64, Ubuntu 11.0.18 x86_64, MSBDiskFPSet, DiskStateQueue).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
@@ -21,185 +21,157 @@ Semantic processing of module Status
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2023-03-29 11:38:04)
+Starting... (2023-03-31 00:33:01)
 @!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2212:0 @!@!@
+Implied-temporal checking--satisfiability problem has 4 branches.
+@!@!@ENDMSG 2212 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
 @!@!@ENDMSG 2189 @!@!@
 @!@!@STARTMSG 2190:0 @!@!@
-Finished computing initial states: 1 distinct state generated at 2023-03-29 11:38:04.
+Finished computing initial states: 1 distinct state generated at 2023-03-31 00:33:02.
 @!@!@ENDMSG 2190 @!@!@
-@!@!@STARTMSG 2114:1 @!@!@
-Deadlock reached.
-@!@!@ENDMSG 2114 @!@!@
-@!@!@STARTMSG 2121:1 @!@!@
-The behavior up to this point is:
-@!@!@ENDMSG 2121 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-1: <Initial predicate>
-/\ master_status = "Working"
-/\ prepared = <<FALSE, FALSE, FALSE>>
-/\ inbox = (0 :> <<>> @@ 1 :> <<>> @@ 2 :> <<>> @@ 3 :> <<>>)
-/\ worker_status = <<"Working", "Working", "Working">>
-
-@!@!@ENDMSG 2217 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-2: <Master_Abort_Transction line 46, col 5 to line 50, col 37 of module Status>
-/\ master_status = "Aborted"
-/\ prepared = <<FALSE, FALSE, FALSE>>
-/\ inbox = ( 0 :> <<>> @@
-  1 :> <<[from |-> 0, type |-> "Aborted"]>> @@
-  2 :> <<[from |-> 0, type |-> "Aborted"]>> @@
-  3 :> <<[from |-> 0, type |-> "Aborted"]>> )
-/\ worker_status = <<"Working", "Working", "Working">>
-
-@!@!@ENDMSG 2217 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-3: <Worker_Recieve line 36, col 5 to line 41, col 37 of module Status>
-/\ master_status = "Aborted"
-/\ prepared = <<FALSE, FALSE, FALSE>>
-/\ inbox = ( 0 :> <<>> @@
-  1 :> <<>> @@
-  2 :> <<[from |-> 0, type |-> "Aborted"]>> @@
-  3 :> <<[from |-> 0, type |-> "Aborted"]>> )
-/\ worker_status = <<"Aborted", "Working", "Working">>
-
-@!@!@ENDMSG 2217 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-4: <Worker_Recieve line 36, col 5 to line 41, col 37 of module Status>
-/\ master_status = "Aborted"
-/\ prepared = <<FALSE, FALSE, FALSE>>
-/\ inbox = ( 0 :> <<>> @@
-  1 :> <<>> @@
-  2 :> <<>> @@
-  3 :> <<[from |-> 0, type |-> "Aborted"]>> )
-/\ worker_status = <<"Aborted", "Aborted", "Working">>
-
-@!@!@ENDMSG 2217 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-5: <Worker_Recieve line 36, col 5 to line 41, col 37 of module Status>
-/\ master_status = "Aborted"
-/\ prepared = <<FALSE, FALSE, FALSE>>
-/\ inbox = (0 :> <<>> @@ 1 :> <<>> @@ 2 :> <<>> @@ 3 :> <<>>)
-/\ worker_status = <<"Aborted", "Aborted", "Aborted">>
-
-@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(11) at 2023-03-31 00:33:02: 1 608 states generated, 520 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2192:0 @!@!@
+Checking 4 branches of temporal properties for the complete state space with 2080 total distinct states at (2023-03-31 00:33:02)
+@!@!@ENDMSG 2192 @!@!@
+@!@!@STARTMSG 2267:0 @!@!@
+Finished checking temporal properties in 00s at 2023-03-31 00:33:02
+@!@!@ENDMSG 2267 @!@!@
+@!@!@STARTMSG 2193:0 @!@!@
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 3.1E-14
+@!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2023-03-29 11:38:05
+The coverage statistics at 2023-03-31 00:33:02
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2773:0 @!@!@
-<Init line 16, col 1 to line 16, col 4 of module Status>: 2:2
+<Init line 16, col 1 to line 16, col 4 of module Status>: 1:1
 @!@!@ENDMSG 2773 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 16, col 9 to line 19, col 45 of module Status: 2
+  line 16, col 9 to line 19, col 45 of module Status: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Worker_Finish line 21, col 1 to line 21, col 17 of module Status>: 23:165
+<Worker_Finish line 21, col 1 to line 21, col 17 of module Status>: 23:210
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 22, col 8 to line 22, col 36 of module Status: 771
+  line 22, col 8 to line 22, col 36 of module Status: 1770
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 22, col 8 to line 22, col 24 of module Status: 606
+  |line 22, col 8 to line 22, col 24 of module Status: 1560
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 23, col 8 to line 23, col 65 of module Status: 165
+  line 23, col 8 to line 23, col 65 of module Status: 210
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 24, col 8 to line 24, col 82 of module Status: 165
+  line 24, col 8 to line 24, col 82 of module Status: 210
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 25, col 8 to line 25, col 27 of module Status: 165
+  line 25, col 8 to line 25, col 27 of module Status: 210
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 26, col 8 to line 26, col 37 of module Status: 165
+  line 26, col 8 to line 26, col 37 of module Status: 210
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Worker_Abort line 28, col 1 to line 28, col 16 of module Status>: 14:165
+<Worker_Abort line 28, col 1 to line 28, col 16 of module Status>: 14:210
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 29, col 8 to line 29, col 36 of module Status: 771
+  line 29, col 8 to line 29, col 36 of module Status: 1770
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 29, col 8 to line 29, col 24 of module Status: 606
+  |line 29, col 8 to line 29, col 24 of module Status: 1560
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 30, col 8 to line 30, col 64 of module Status: 165
+  line 30, col 8 to line 30, col 64 of module Status: 210
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 31, col 8 to line 31, col 21 of module Status: 165
+  line 31, col 8 to line 31, col 21 of module Status: 210
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 32, col 8 to line 32, col 27 of module Status: 165
+  line 32, col 8 to line 32, col 27 of module Status: 210
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 33, col 8 to line 33, col 37 of module Status: 165
+  line 33, col 8 to line 33, col 37 of module Status: 210
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Worker_Recieve line 35, col 1 to line 35, col 18 of module Status>: 127:297
+<Worker_Recieve line 35, col 1 to line 35, col 18 of module Status>: 163:744
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 36, col 8 to line 36, col 25 of module Status: 906
+  line 36, col 8 to line 36, col 25 of module Status: 2304
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 36, col 8 to line 36, col 21 of module Status: 609
+  |line 36, col 8 to line 36, col 21 of module Status: 1560
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 37, col 9 to line 37, col 40 of module Status: 594
+  line 37, col 9 to line 37, col 40 of module Status: 1488
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 37, col 9 to line 37, col 28 of module Status: 297
+  |line 37, col 9 to line 37, col 28 of module Status: 744
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 37, col 45 to line 37, col 77 of module Status: 297
+  line 37, col 45 to line 37, col 77 of module Status: 744
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 38, col 8 to line 38, col 75 of module Status: 297
+  line 38, col 8 to line 38, col 75 of module Status: 744
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 39, col 8 to line 39, col 54 of module Status: 297
+  line 39, col 8 to line 39, col 54 of module Status: 744
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 40, col 8 to line 40, col 27 of module Status: 297
+  line 40, col 8 to line 40, col 27 of module Status: 744
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 8 to line 41, col 37 of module Status: 297
+  line 41, col 8 to line 41, col 37 of module Status: 744
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Master_Abort_Transction line 45, col 1 to line 45, col 23 of module Status>: 38:72
+<Master_Abort_Transction line 45, col 1 to line 45, col 23 of module Status>: 38:77
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 46, col 8 to line 46, col 32 of module Status: 273
+  line 46, col 8 to line 46, col 32 of module Status: 597
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 46, col 8 to line 46, col 20 of module Status: 201
+  |line 46, col 8 to line 46, col 20 of module Status: 520
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 47, col 8 to line 47, col 33 of module Status: 72
+  line 47, col 8 to line 47, col 33 of module Status: 77
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 48, col 8 to line 48, col 50 of module Status: 72
+  line 48, col 8 to line 48, col 50 of module Status: 77
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 49, col 8 to line 49, col 27 of module Status: 72
+  line 49, col 8 to line 49, col 27 of module Status: 77
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 50, col 8 to line 50, col 37 of module Status: 72
+  line 50, col 8 to line 50, col 37 of module Status: 77
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Master_Recieve_Message line 52, col 1 to line 52, col 22 of module Status>: 120:132
+<Master_Recieve_Message line 52, col 1 to line 52, col 22 of module Status>: 281:366
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 53, col 8 to line 53, col 24 of module Status: 332
+  line 53, col 8 to line 53, col 24 of module Status: 886
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 53, col 8 to line 53, col 20 of module Status: 200
+  |line 53, col 8 to line 53, col 20 of module Status: 520
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 54, col 8 to line 54, col 66 of module Status: 132
+  line 54, col 8 to line 54, col 66 of module Status: 366
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 55, col 12 to line 56, col 38 of module Status: 132
+  |line 54, col 20 to line 54, col 66 of module Status: 369
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 12 to line 56, col 38 of module Status: 369
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 55, col 12 to line 55, col 48 of module Status: 369
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 56, col 14 to line 56, col 38 of module Status: 27
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 57, col 16 to line 57, col 43 of module Status: 0
@@ -207,30 +179,39 @@ The coverage statistics at 2023-03-29 11:38:05
 @!@!@STARTMSG 2221:0 @!@!@
   line 43, col 17 to line 43, col 91 of module Status: 0
 @!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  |line 43, col 26 to line 43, col 91 of module Status: 3:12
+@!@!@ENDMSG 2775 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 59, col 16 to line 59, col 45 of module Status: 132
+  line 58, col 26 to line 58, col 59 of module Status: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 60, col 8 to line 60, col 52 of module Status: 132
+  line 59, col 16 to line 59, col 45 of module Status: 366
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 61, col 8 to line 61, col 37 of module Status: 132
+  line 60, col 8 to line 60, col 52 of module Status: 366
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 60, col 17 to line 60, col 52 of module Status: 369
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 61, col 8 to line 61, col 37 of module Status: 366
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(6) at 2023-03-29 11:38:05: 822 states generated (60 441 s/min), 323 distinct states found (23 750 ds/min), 123 states left on queue.
+Progress(11) at 2023-03-31 00:33:02: 1 608 states generated (63 599 s/min), 520 distinct states found (20 566 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
-822 states generated, 323 distinct states found, 123 states left on queue.
+1608 states generated, 520 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
 @!@!@STARTMSG 2194:0 @!@!@
-The depth of the complete state graph search is 6.
+The depth of the complete state graph search is 11.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2268:0 @!@!@
-The average outdegree of the complete state graph is 2 (minimum is 0, the maximum 7 and the 95th percentile is 4).
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 7 and the 95th percentile is 3).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 825ms at (2023-03-29 11:38:05)
+Finished in 1524ms at (2023-03-31 00:33:02)
 @!@!@ENDMSG 2186 @!@!@

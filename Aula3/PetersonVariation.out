@@ -2,7 +2,7 @@
 TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with fp 103 and seed -3510613524047631205 with 1 worker on 12 cores with 3524MB heap and 64MB offheap memory [pid: 13490] (Linux 5.19.0-38-generic amd64, Ubuntu 11.0.18 x86_64, MSBDiskFPSet, DiskStateQueue).
+Running breadth-first search Model-Checking with fp 122 and seed 111573495433992013 with 1 worker on 12 cores with 3524MB heap and 64MB offheap memory [pid: 23557] (Linux 5.19.0-38-generic amd64, Ubuntu 11.0.18 x86_64, MSBDiskFPSet, DiskStateQueue).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
@@ -17,7 +17,7 @@ Semantic processing of module PetersonVariation
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2023-03-29 11:14:11)
+Starting... (2023-03-30 23:34:50)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2212:0 @!@!@
 Implied-temporal checking--satisfiability problem has 1 branches.
@@ -26,13 +26,13 @@ Implied-temporal checking--satisfiability problem has 1 branches.
 Computing initial states...
 @!@!@ENDMSG 2189 @!@!@
 @!@!@STARTMSG 2190:0 @!@!@
-Finished computing initial states: 1 distinct state generated at 2023-03-29 11:14:11.
+Finished computing initial states: 1 distinct state generated at 2023-03-30 23:34:51.
 @!@!@ENDMSG 2190 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(19) at 2023-03-29 11:14:12: 2 268 states generated, 934 distinct states found, 0 states left on queue.
+Progress(19) at 2023-03-30 23:34:51: 2 268 states generated, 934 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2192:0 @!@!@
-Checking temporal properties for the complete state space with 934 total distinct states at (2023-03-29 11:14:12)
+Checking temporal properties for the complete state space with 934 total distinct states at (2023-03-30 23:34:51)
 @!@!@ENDMSG 2192 @!@!@
 @!@!@STARTMSG 2116:1 @!@!@
 Temporal properties were violated.
@@ -75,19 +75,19 @@ The following behavior constitutes a counter-example:
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-5: <Idlle line 14, col 5 to line 21, col 47 of module PetersonVariation>
-/\ level = (0 :> 0 @@ 1 :> 0 @@ 2 :> 0)
-/\ last = (0 :> 2 @@ 1 :> 0)
-/\ l = (0 :> 1 @@ 1 :> 0 @@ 2 :> 0)
-/\ pc = (0 :> 0 @@ 1 :> 1 @@ 2 :> 1)
+5: <Loop line 24, col 5 to line 29, col 32 of module PetersonVariation>
+/\ level = (0 :> 0 @@ 1 :> 0 @@ 2 :> -1)
+/\ last = (0 :> 1 @@ 1 :> 0)
+/\ l = (0 :> 1 @@ 1 :> 1 @@ 2 :> 0)
+/\ pc = (0 :> 0 @@ 1 :> 0 @@ 2 :> 0)
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-6: <Loop line 24, col 5 to line 29, col 32 of module PetersonVariation>
-/\ level = (0 :> 0 @@ 1 :> 0 @@ 2 :> 0)
-/\ last = (0 :> 2 @@ 1 :> 0)
+6: <Idlle line 14, col 5 to line 21, col 47 of module PetersonVariation>
+/\ level = (0 :> 0 @@ 1 :> 1 @@ 2 :> -1)
+/\ last = (0 :> 1 @@ 1 :> 1)
 /\ l = (0 :> 1 @@ 1 :> 1 @@ 2 :> 0)
-/\ pc = (0 :> 0 @@ 1 :> 0 @@ 2 :> 1)
+/\ pc = (0 :> 0 @@ 1 :> 1 @@ 2 :> 0)
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
@@ -134,8 +134,8 @@ The following behavior constitutes a counter-example:
 12: <Loop line 24, col 5 to line 29, col 32 of module PetersonVariation>
 /\ level = (0 :> 1 @@ 1 :> 1 @@ 2 :> 1)
 /\ last = (0 :> 2 @@ 1 :> 2)
-/\ l = (0 :> 1 @@ 1 :> 2 @@ 2 :> 2)
-/\ pc = (0 :> 1 @@ 1 :> 0 @@ 2 :> 0)
+/\ l = (0 :> 2 @@ 1 :> 2 @@ 2 :> 1)
+/\ pc = (0 :> 0 @@ 1 :> 0 @@ 2 :> 1)
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
@@ -172,22 +172,22 @@ The following behavior constitutes a counter-example:
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 17: <Critical line 32, col 5 to line 36, col 25 of module PetersonVariation>
-/\ level = (0 :> 1 @@ 1 :> -1 @@ 2 :> 1)
+/\ level = (0 :> -1 @@ 1 :> 1 @@ 2 :> 1)
 /\ last = (0 :> 2 @@ 1 :> 2)
-/\ l = (0 :> 2 @@ 1 :> 0 @@ 2 :> 2)
-/\ pc = (0 :> 2 @@ 1 :> 0 @@ 2 :> 2)
+/\ l = (0 :> 0 @@ 1 :> 2 @@ 2 :> 2)
+/\ pc = (0 :> 0 @@ 1 :> 2 @@ 2 :> 2)
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-18: <Critical line 32, col 5 to line 36, col 25 of module PetersonVariation>
-/\ level = (0 :> -1 @@ 1 :> -1 @@ 2 :> 1)
-/\ last = (0 :> 2 @@ 1 :> 2)
-/\ l = (0 :> 0 @@ 1 :> 0 @@ 2 :> 2)
-/\ pc = (0 :> 0 @@ 1 :> 0 @@ 2 :> 2)
+18: <Idlle line 14, col 5 to line 21, col 47 of module PetersonVariation>
+/\ level = (0 :> 0 @@ 1 :> 1 @@ 2 :> 1)
+/\ last = (0 :> 0 @@ 1 :> 2)
+/\ l = (0 :> 0 @@ 1 :> 2 @@ 2 :> 2)
+/\ pc = (0 :> 1 @@ 1 :> 2 @@ 2 :> 2)
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-19: <Idlle line 14, col 5 to line 21, col 47 of module PetersonVariation>
+19: <Critical line 32, col 5 to line 36, col 25 of module PetersonVariation>
 /\ level = (0 :> 0 @@ 1 :> -1 @@ 2 :> 1)
 /\ last = (0 :> 0 @@ 1 :> 2)
 /\ l = (0 :> 0 @@ 1 :> 0 @@ 2 :> 2)
@@ -228,42 +228,90 @@ The following behavior constitutes a counter-example:
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 24: <Idlle line 14, col 5 to line 21, col 47 of module PetersonVariation>
-/\ level = (0 :> 1 @@ 1 :> -1 @@ 2 :> 0)
-/\ last = (0 :> 2 @@ 1 :> 0)
+/\ level = (0 :> 1 @@ 1 :> -1 @@ 2 :> -1)
+/\ last = (0 :> 0 @@ 1 :> 0)
 /\ l = (0 :> 2 @@ 1 :> 0 @@ 2 :> 0)
-/\ pc = (0 :> 0 @@ 1 :> 0 @@ 2 :> 1)
+/\ pc = (0 :> 2 @@ 1 :> 0 @@ 2 :> 0)
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
-25: <Loop line 24, col 5 to line 29, col 32 of module PetersonVariation>
-/\ level = (0 :> 1 @@ 1 :> -1 @@ 2 :> 0)
-/\ last = (0 :> 2 @@ 1 :> 0)
-/\ l = (0 :> 2 @@ 1 :> 0 @@ 2 :> 1)
+25: <Critical line 32, col 5 to line 36, col 25 of module PetersonVariation>
+/\ level = (0 :> -1 @@ 1 :> -1 @@ 2 :> -1)
+/\ last = (0 :> 0 @@ 1 :> 0)
+/\ l = (0 :> 0 @@ 1 :> 0 @@ 2 :> 0)
 /\ pc = (0 :> 0 @@ 1 :> 0 @@ 2 :> 0)
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 26: <Idlle line 14, col 5 to line 21, col 47 of module PetersonVariation>
-/\ level = (0 :> 1 @@ 1 :> -1 @@ 2 :> 1)
-/\ last = (0 :> 2 @@ 1 :> 2)
-/\ l = (0 :> 2 @@ 1 :> 0 @@ 2 :> 1)
-/\ pc = (0 :> 0 @@ 1 :> 0 @@ 2 :> 1)
+/\ level = (0 :> -1 @@ 1 :> 0 @@ 2 :> -1)
+/\ last = (0 :> 1 @@ 1 :> 0)
+/\ l = (0 :> 0 @@ 1 :> 0 @@ 2 :> 0)
+/\ pc = (0 :> 0 @@ 1 :> 1 @@ 2 :> 0)
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 27: <Loop line 24, col 5 to line 29, col 32 of module PetersonVariation>
-/\ level = (0 :> 1 @@ 1 :> -1 @@ 2 :> 1)
-/\ last = (0 :> 2 @@ 1 :> 2)
-/\ l = (0 :> 2 @@ 1 :> 0 @@ 2 :> 2)
+/\ level = (0 :> -1 @@ 1 :> 0 @@ 2 :> -1)
+/\ last = (0 :> 1 @@ 1 :> 0)
+/\ l = (0 :> 0 @@ 1 :> 1 @@ 2 :> 0)
 /\ pc = (0 :> 0 @@ 1 :> 0 @@ 2 :> 0)
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2217:4 @!@!@
 28: <Idlle line 14, col 5 to line 21, col 47 of module PetersonVariation>
-/\ level = (0 :> 1 @@ 1 :> -1 @@ 2 :> 1)
+/\ level = (0 :> -1 @@ 1 :> 1 @@ 2 :> -1)
+/\ last = (0 :> 1 @@ 1 :> 1)
+/\ l = (0 :> 0 @@ 1 :> 1 @@ 2 :> 0)
+/\ pc = (0 :> 0 @@ 1 :> 1 @@ 2 :> 0)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+29: <Loop line 24, col 5 to line 29, col 32 of module PetersonVariation>
+/\ level = (0 :> -1 @@ 1 :> 1 @@ 2 :> -1)
+/\ last = (0 :> 1 @@ 1 :> 1)
+/\ l = (0 :> 0 @@ 1 :> 2 @@ 2 :> 0)
+/\ pc = (0 :> 0 @@ 1 :> 0 @@ 2 :> 0)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+30: <Idlle line 14, col 5 to line 21, col 47 of module PetersonVariation>
+/\ level = (0 :> -1 @@ 1 :> 1 @@ 2 :> 0)
+/\ last = (0 :> 2 @@ 1 :> 1)
+/\ l = (0 :> 0 @@ 1 :> 2 @@ 2 :> 0)
+/\ pc = (0 :> 0 @@ 1 :> 0 @@ 2 :> 1)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+31: <Loop line 24, col 5 to line 29, col 32 of module PetersonVariation>
+/\ level = (0 :> -1 @@ 1 :> 1 @@ 2 :> 0)
+/\ last = (0 :> 2 @@ 1 :> 1)
+/\ l = (0 :> 0 @@ 1 :> 2 @@ 2 :> 1)
+/\ pc = (0 :> 0 @@ 1 :> 0 @@ 2 :> 0)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+32: <Idlle line 14, col 5 to line 21, col 47 of module PetersonVariation>
+/\ level = (0 :> -1 @@ 1 :> 1 @@ 2 :> 1)
 /\ last = (0 :> 2 @@ 1 :> 2)
-/\ l = (0 :> 2 @@ 1 :> 0 @@ 2 :> 2)
-/\ pc = (0 :> 2 @@ 1 :> 0 @@ 2 :> 0)
+/\ l = (0 :> 0 @@ 1 :> 2 @@ 2 :> 1)
+/\ pc = (0 :> 0 @@ 1 :> 0 @@ 2 :> 1)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+33: <Loop line 24, col 5 to line 29, col 32 of module PetersonVariation>
+/\ level = (0 :> -1 @@ 1 :> 1 @@ 2 :> 1)
+/\ last = (0 :> 2 @@ 1 :> 2)
+/\ l = (0 :> 0 @@ 1 :> 2 @@ 2 :> 2)
+/\ pc = (0 :> 0 @@ 1 :> 0 @@ 2 :> 0)
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+34: <Idlle line 14, col 5 to line 21, col 47 of module PetersonVariation>
+/\ level = (0 :> -1 @@ 1 :> 1 @@ 2 :> 1)
+/\ last = (0 :> 2 @@ 1 :> 2)
+/\ l = (0 :> 0 @@ 1 :> 2 @@ 2 :> 2)
+/\ pc = (0 :> 0 @@ 1 :> 2 @@ 2 :> 0)
 
 @!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2122:4 @!@!@
@@ -271,10 +319,10 @@ The following behavior constitutes a counter-example:
 
 @!@!@ENDMSG 2122 @!@!@
 @!@!@STARTMSG 2267:0 @!@!@
-Finished checking temporal properties in 00s at 2023-03-29 11:14:12
+Finished checking temporal properties in 00s at 2023-03-30 23:34:52
 @!@!@ENDMSG 2267 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2023-03-29 11:14:12
+The coverage statistics at 2023-03-30 23:34:52
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2773:0 @!@!@
 <Init line 11, col 1 to line 11, col 4 of module PetersonVariation>: 2:2
@@ -283,91 +331,91 @@ The coverage statistics at 2023-03-29 11:14:12
   line 11, col 9 to line 11, col 125 of module PetersonVariation: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Idlle line 13, col 1 to line 13, col 8 of module PetersonVariation>: 530:2667
+<Idlle line 13, col 1 to line 13, col 8 of module PetersonVariation>: 530:2676
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 14, col 8 to line 14, col 16 of module PetersonVariation: 8171
+  line 14, col 8 to line 14, col 16 of module PetersonVariation: 8191
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 14, col 8 to line 14, col 12 of module PetersonVariation: 5504
+  |line 14, col 8 to line 14, col 12 of module PetersonVariation: 5515
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 15, col 11 to line 15, col 20 of module PetersonVariation: 2667
+  line 15, col 11 to line 15, col 20 of module PetersonVariation: 2676
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 16, col 15 to line 18, col 41 of module PetersonVariation: 1843
+  line 16, col 15 to line 18, col 41 of module PetersonVariation: 1850
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 19, col 16 to line 19, col 30 of module PetersonVariation: 1843
+  line 19, col 16 to line 19, col 30 of module PetersonVariation: 1850
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 20, col 18 to line 20, col 43 of module PetersonVariation: 824
+  line 20, col 18 to line 20, col 43 of module PetersonVariation: 826
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 21, col 20 to line 21, col 47 of module PetersonVariation: 824
+  line 21, col 20 to line 21, col 47 of module PetersonVariation: 826
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Loop line 23, col 1 to line 23, col 7 of module PetersonVariation>: 273:992
+<Loop line 23, col 1 to line 23, col 7 of module PetersonVariation>: 273:994
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 24, col 8 to line 24, col 16 of module PetersonVariation: 6380
+  line 24, col 8 to line 24, col 16 of module PetersonVariation: 6389
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 24, col 8 to line 24, col 12 of module PetersonVariation: 5489
+  |line 24, col 8 to line 24, col 12 of module PetersonVariation: 5497
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 25, col 27 to line 25, col 35 of module PetersonVariation: 8231
+  line 25, col 27 to line 25, col 35 of module PetersonVariation: 8239
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 25, col 27 to line 25, col 31 of module PetersonVariation: 5558
+  |line 25, col 27 to line 25, col 31 of module PetersonVariation: 5563
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 25, col 17 to line 25, col 22 of module PetersonVariation: 2049
+  line 25, col 17 to line 25, col 22 of module PetersonVariation: 2051
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 26, col 9 to line 26, col 23 of module PetersonVariation: 2227
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 26, col 9 to line 26, col 19 of module PetersonVariation: 1490
+  |line 26, col 9 to line 26, col 19 of module PetersonVariation: 1491
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 26, col 23 to line 26, col 23 of module PetersonVariation: 1490
+  |line 26, col 23 to line 26, col 23 of module PetersonVariation: 1491
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 26, col 46 to line 26, col 69 of module PetersonVariation: 255
+  line 26, col 46 to line 26, col 69 of module PetersonVariation: 258
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 26, col 46 to line 26, col 50 of module PetersonVariation: 2863
+  |line 26, col 46 to line 26, col 50 of module PetersonVariation: 2873
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 26, col 55 to line 26, col 69 of module PetersonVariation: 510
+  |line 26, col 55 to line 26, col 69 of module PetersonVariation: 516
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 26, col 55 to line 26, col 62 of module PetersonVariation: 2056
+  ||line 26, col 55 to line 26, col 62 of module PetersonVariation: 2062
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 26, col 66 to line 26, col 69 of module PetersonVariation: 2056
+  ||line 26, col 66 to line 26, col 69 of module PetersonVariation: 2062
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 26, col 37 to line 26, col 42 of module PetersonVariation: 1490
+  line 26, col 37 to line 26, col 42 of module PetersonVariation: 1491
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 27, col 8 to line 27, col 35 of module PetersonVariation: 992
+  line 27, col 8 to line 27, col 35 of module PetersonVariation: 994
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 28, col 8 to line 28, col 33 of module PetersonVariation: 992
+  line 28, col 8 to line 28, col 33 of module PetersonVariation: 994
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 29, col 8 to line 29, col 32 of module PetersonVariation: 992
+  line 29, col 8 to line 29, col 32 of module PetersonVariation: 994
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
 <Critical line 31, col 1 to line 31, col 11 of module PetersonVariation>: 130:788
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 32, col 8 to line 32, col 16 of module PetersonVariation: 6267
+  line 32, col 8 to line 32, col 16 of module PetersonVariation: 6273
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 32, col 8 to line 32, col 12 of module PetersonVariation: 5479
+  |line 32, col 8 to line 32, col 12 of module PetersonVariation: 5485
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 33, col 8 to line 33, col 40 of module PetersonVariation: 788
@@ -385,11 +433,11 @@ The coverage statistics at 2023-03-29 11:14:12
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(19) at 2023-03-29 11:14:12: 2 268 states generated (110 097 s/min), 934 distinct states found (45 339 ds/min), 0 states left on queue.
+Progress(19) at 2023-03-30 23:34:52: 2 268 states generated (63 410 s/min), 934 distinct states found (26 113 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
 2268 states generated, 934 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 1246ms at (2023-03-29 11:14:12)
+Finished in 2172ms at (2023-03-30 23:34:52)
 @!@!@ENDMSG 2186 @!@!@

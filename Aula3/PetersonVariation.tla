@@ -39,12 +39,14 @@ Next == \E i \in 0..N-1 : Idlle(i) \/ Loop(i) \/ Critical(i)
 
 vars == <<pc, level, last, l>>
 
-Algorithm == Init /\ [][Next]_vars /\ WF_vars(Next)
+Fairness == \A i \in 0..N-1 : WF_vars(Next)
+
+Algorithm == Init /\ [][Next]_vars /\ Fairness
 
 MutualExclusion == \A i,j \in 0..N-1 : i # j /\ pc[i] = 2 => pc[j] # 2
 
 NoStrarvation == [] \A i \in 0..N-1 : pc[i] = 1 => <> (pc[i] = 2)
 
-AllInCritical == ~<>(\A i \in 0..N-1 : pc[i] = 2)
+AllInCritical == ~(<>(\A i \in 0..N-1 : pc[i] = 2))
 
 =============================================================================

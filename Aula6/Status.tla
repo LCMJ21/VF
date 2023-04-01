@@ -66,6 +66,11 @@ Next ==(\E id \in 1..N : Worker_Recieve(id) \/ Worker_Finish(id) \/ Worker_Abort
 
 vars == <<inbox, worker_status, master_status, prepared>>
 
-Spec == Init /\ [][Next]_vars
+Spec == Init /\ [][Next]_vars /\ WF_vars(Next)
 
+AbortedAndCommited == ~(\E i,j \in 1..N : worker_status[i] = "Aborted" /\ worker_status[j] = "Committed")
+
+OnceIsForever == (\A i \in 1..N : (worker_status[i] = "Aborted" \/ worker_status[i] = "Committed") => [] (master_status = "Aborted" \/ master_status = "Committed"))
+
+OneCommited == (\E i \in 1..N : worker_status[i] = "Committed") => (<> (\A i \in 1..N : worker_status[i] = "Committed"))
 =============================================================================
