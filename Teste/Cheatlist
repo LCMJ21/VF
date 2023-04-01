@@ -1,0 +1,30 @@
+
+TLA+ link
+    https://lamport.azurewebsites.net/tla/summary-standalone.pdf
+
+mutual exclusion
+    os dois processos nunca estão na região critica ao mesmo tempo
+    [] ~(pc[0]=2 /\ pc[1]=2)
+
+no starvation
+    sempre que um processo pretende aceder à região crítica irá conseguir
+    [] (pc[0]=1 => <>(pc[0]=2)) /\ [] (pc[1]=1 => <>(pc[1]=2))
+
+safety
+    proíbe certos estados “maus” de acontecerem
+    mutual exclusion
+
+liveness
+    garante que certos estados “bons” acontecem em certas condições
+    no starvation
+
+Closure
+    uma vez atingido um estado válido, o sistema fica para sempre num estado válido.
+Convergence
+    o sistema vai chegar a um estado válido.
+
+justiça fraca
+    <>[] ENABLED A => []<> A 
+
+justiça forte
+    []<> ENABLED A => []<> A
